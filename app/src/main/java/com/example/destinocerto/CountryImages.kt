@@ -60,5 +60,13 @@ class CountryImages : AppCompatActivity() {
                 startActivity(intentCoin)
             }
         }
+        if (aTitle.equals("Inglaterra")) {
+            val button: Button = findViewById(R.id.btnPrice)
+            button.setOnClickListener {
+                val intentCoin = Intent(this, ActivityPrice::class.java)
+                intentCoin.putExtra("type", "4")
+                startActivity(intentCoin)
+            }
+        }
     }
 }

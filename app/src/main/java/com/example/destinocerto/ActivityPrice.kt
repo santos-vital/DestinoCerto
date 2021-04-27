@@ -92,5 +92,24 @@ class ActivityPrice : AppCompatActivity() {
 
             queue.add(stringRequest)
         }
+        if (type == "4") {
+
+            val queue = Volley.newRequestQueue(this)
+
+            val url = "https://economia.awesomeapi.com.br/json/GBP-BRL"
+
+            val stringRequest = StringRequest(
+                    Request.Method.GET, url,
+                    { response ->
+                        val gson = GsonBuilder().create()
+
+                        val result = gson.fromJson(response.toString(), Array<Coin>::class.java).toList()
+                        tvNameCoin.text = result.firstOrNull()?.name
+                        tvBid.text = result.firstOrNull()?.bid.toString()
+                    },
+                    Response.ErrorListener { tvBid.text = "Error" })
+
+            queue.add(stringRequest)
+        }
     }
 }

@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         countries.add(Model("Estados Unidos", "Estados Unidos da América (EUA), é um país localizado na América do Norte).", R.drawable.flag_eua))
         countries.add(Model("China", "A China, uma das maiores potências mundiais, oficialmente chamada República Popular da China.", R.drawable.flag_china))
         countries.add(Model("França", "A França está entre os países mais ricos e desenvolvidos do mundo.", R.drawable.flag_france))
+        countries.add(Model("Inglaterra", "Inglaterra (em inglês: England) é uma das nações constituintes do Reino Unido.", R.drawable.flag_england))
         displayList.addAll(countries)
 
         val adapter = MyCustomAdapter(displayList, this);

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".CountryImages">
+
+    <ImageView
+        android:id="@+id/imageCountryIv"
+        android:layout_width="334dp"
+        android:layout_height="451dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/nameCountryTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/countryName"
+        android:textSize="22sp"/>
+
+    <Button
+        android:id="@+id/btnPrice"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/descCountryTv"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="-79dp"
+        android:text="@string/btnPrice" />
+
+    <TextView
+        android:id="@+id/descCountryTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textCountryImage"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_below="@+id/imageCountryIv"/>
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DestinoCerto</string>
+    <string name="appTitle">Destino Certo</string>
+    <string name="countryName">Lista de Países</string>
+    <string name="titleTv">Lista de Países</string>
+    <string name="textCountryImage">Imagem do Pais</string>
+    <string name="sv_search">Search</string>
+    <string name="btnPrice">Cotação da moeda</string>
+    <string name="priceTitle">Cotação da moeda</string>
+    <string name="nameCoin">Nome da moeda</string>
+    <string name="bid">Oferta</string>
+    <string name="descriptionName">Nome: </string>
+    <string name="descriptionPrice">Valor de 1,00 R$: </string>
+
+</resources>

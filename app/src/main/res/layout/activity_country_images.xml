@@ -5,13 +5,14 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:gravity="center"
-    android:background="@color/white"
+    android:background="@color/lightGrayColor"
     tools:context=".CountryImages">
 
     <ImageView
         android:id="@+id/imageCountryIv"
-        android:layout_width="334dp"
+        android:layout_width="match_parent"
         android:layout_height="451dp"
+        android:gravity="center"
         android:layout_gravity="center_horizontal"
         android:src="@mipmap/ic_launcher"/>
 

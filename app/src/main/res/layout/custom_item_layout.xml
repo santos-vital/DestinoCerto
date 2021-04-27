@@ -14,7 +14,7 @@
             android:id="@+id/listImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/flag_brazil"
+            android:src="@drawable/flag_china"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>

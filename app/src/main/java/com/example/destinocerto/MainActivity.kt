@@ -1,31 +1,32 @@
 package com.example.destinocerto
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.destinocerto.model.Country
+import com.example.destinocerto.activity.MyCustomAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
-    private val countries = ArrayList<Model>()
-    private val displayList = ArrayList<Model>()
+    private val countries = ArrayList<Country>()
+    private val displayList = ArrayList<Country>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
-        countries.add(Model("Alemanha", "País localizado no oeste da Europa e é uma das maiores potências mundiais.", R.drawable.flag_germany))
-        countries.add(Model("Estados Unidos", "Estados Unidos da América (EUA), é um país localizado na América do Norte).", R.drawable.flag_eua))
-        countries.add(Model("China", "A China, uma das maiores potências mundiais, oficialmente chamada República Popular da China.", R.drawable.flag_china))
-        countries.add(Model("França", "A França está entre os países mais ricos e desenvolvidos do mundo.", R.drawable.flag_france))
-        countries.add(Model("Inglaterra", "Inglaterra (em inglês: England) é uma das nações constituintes do Reino Unido.", R.drawable.flag_england))
+        countries.add(Country("Alemanha", "País localizado no oeste da Europa e é uma das maiores potências mundiais.", R.drawable.flag_germany))
+        countries.add(Country("Estados Unidos", "Estados Unidos da América (EUA), é um país localizado na América do Norte).", R.drawable.flag_eua))
+        countries.add(Country("China", "A China, uma das maiores potências mundiais, oficialmente chamada República Popular da China.", R.drawable.flag_china))
+        countries.add(Country("França", "A França está entre os países mais ricos e desenvolvidos do mundo.", R.drawable.flag_france))
+        countries.add(Country("Inglaterra", "Inglaterra (em inglês: England) é uma das nações constituintes do Reino Unido.", R.drawable.flag_england))
         displayList.addAll(countries)
 
         val adapter = MyCustomAdapter(displayList, this);

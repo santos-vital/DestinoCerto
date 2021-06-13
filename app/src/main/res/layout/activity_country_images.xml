@@ -6,15 +6,15 @@
     android:padding="16dp"
     android:gravity="center"
     android:background="@color/lightGrayColor"
-    tools:context=".CountryImages">
+    tools:context=".activity.CountryImages">
 
     <ImageView
         android:id="@+id/imageCountryIv"
         android:layout_width="match_parent"
-        android:layout_height="451dp"
-        android:gravity="center"
+        android:layout_height="300dp"
         android:layout_gravity="center_horizontal"
-        android:src="@mipmap/ic_launcher"/>
+        android:gravity="center"
+        android:src="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/nameCountryTv"
@@ -35,6 +35,17 @@
         android:layout_marginBottom="-79dp"
         android:text="@string/btnPrice" />
 
+    <Button
+        android:id="@+id/btnComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnPrice"
+        android:layout_alignBottom="@id/btnPrice"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="-171dp"
+        android:layout_marginBottom="-1dp"
+        android:text="@string/btnComment" />
+
     <TextView
         android:id="@+id/descCountryTv"
         android:layout_width="match_parent"
@@ -43,5 +54,13 @@
         android:textSize="18sp"
         android:gravity="center"
         android:layout_below="@+id/imageCountryIv"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnPrice"
+        android:layout_marginBottom="-215dp" />
+
 
 </RelativeLayout>

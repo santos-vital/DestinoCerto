@@ -1,4 +1,4 @@
-package com.example.destinocerto
+package com.example.destinocerto.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,8 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.example.destinocerto.model.Coin
+import com.example.destinocerto.R
 import com.google.gson.GsonBuilder
 import kotlinx.android.synthetic.main.activity_price.*
 

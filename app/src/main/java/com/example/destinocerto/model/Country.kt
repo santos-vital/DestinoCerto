@@ -1,6 +1,6 @@
-package com.example.destinocerto
+package com.example.destinocerto.model
 
-data class Model (
+data class Country (
     val CountryName: String,
     val CountryDescription: String,
     val CountryImage: Int

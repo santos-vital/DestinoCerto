@@ -1,10 +1,11 @@
-package com.example.destinocerto
+package com.example.destinocerto.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.ActionBar
+import com.example.destinocerto.R
 import kotlinx.android.synthetic.main.activity_country_images.*
 
 class CountryImages : AppCompatActivity() {
@@ -67,6 +68,12 @@ class CountryImages : AppCompatActivity() {
                 intentCoin.putExtra("type", "4")
                 startActivity(intentCoin)
             }
+        }
+
+        val buttonComment: Button = findViewById(R.id.btnComment)
+        buttonComment.setOnClickListener {
+            val intentComment = Intent(this, Comment::class.java)
+            startActivity(intentComment)
         }
     }
 }

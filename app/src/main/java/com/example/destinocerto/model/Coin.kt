@@ -1,4 +1,4 @@
-package com.example.destinocerto
+package com.example.destinocerto.model
 
 class Coin {
     var name: String = ""

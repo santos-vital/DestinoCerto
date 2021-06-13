@@ -1,23 +1,24 @@
-package com.example.destinocerto
+package com.example.destinocerto.activity
 
-import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.destinocerto.R
+import com.example.destinocerto.model.Country
 import kotlinx.android.synthetic.main.row.view.*
 
-class MyCustomAdapter(val arrayList: ArrayList<Model>, val ctx: Context) :
+class MyCustomAdapter(val arrayList: ArrayList<Country>, val ctx: Context) :
 RecyclerView.Adapter<MyCustomAdapter.ViewHolder>() {
 
 class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    fun bindItaems(model: Model) {
-        itemView.nameTv.text = model.CountryName
-        itemView.descriptionTv.text = model.CountryDescription
-        itemView.imageIv.setImageResource(model.CountryImage)
+    fun bindItaems(country: Country) {
+        itemView.nameTv.text = country.CountryName
+        itemView.descriptionTv.text = country.CountryDescription
+        itemView.imageIv.setImageResource(country.CountryImage)
     }
 }
 

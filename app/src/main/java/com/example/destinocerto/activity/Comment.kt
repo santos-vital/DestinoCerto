@@ -17,31 +17,31 @@ class Comment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_comment)
+            val comment = intent.getStringExtra("cmt")
 
             mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
-            save_comment.setOnClickListener {
 
-                insertDataToDatabase()
-            }
+        save_comment.setOnClickListener {
 
+            insertDataToDatabase()
         }
+    }
 
-        private fun insertDataToDatabase() {
-            val nickName = et_nickName.text.toString()
-            val comment = et_addComment.text.toString()
+    private fun insertDataToDatabase() {
+        val nickName = et_nickName.text.toString()
+        val comment = et_addComment.text.toString()
 
-            if(inputCheck(nickName, comment)) {
-                // Create User Object
-                val user = User( 0, nickName, comment)
-                // Add Data to Database
-                mUserViewModel.addUser(user)
-                Toast.makeText(this, "Comentário adicionado!", Toast.LENGTH_LONG).show()
-            }else {
-                Toast.makeText(this, "Por favor preencha todos os campos.", Toast.LENGTH_LONG).show()
-            }
-
+        if(inputCheck(nickName, comment)) {
+            // Create User Object
+            val user = User( 0, nickName, comment)
+            // Add Data to Database
+            mUserViewModel.addUser(user)
+            Toast.makeText(this, "Comentário adicionado!", Toast.LENGTH_LONG).show()
+        }else {
+            Toast.makeText(this, "Por favor preencha todos os campos.", Toast.LENGTH_LONG).show()
         }
+    }
 
         private fun inputCheck(nickName: String, comment: String): Boolean {
             return !(TextUtils.isEmpty(nickName) && TextUtils.isEmpty(comment))

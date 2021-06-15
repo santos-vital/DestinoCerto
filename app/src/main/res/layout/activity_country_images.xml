@@ -1,66 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="5dp"
     android:gravity="center"
-    android:background="@color/lightGrayColor"
     tools:context=".activity.CountryImages">
 
-    <ImageView
-        android:id="@+id/imageCountryIv"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"
-        android:src="@mipmap/ic_launcher" />
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="720dp"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/nameCountryTv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:text="@string/countryName"
-        android:textSize="22sp"/>
+        <ImageView
+            android:id="@+id/imageCountryIv"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:src="@mipmap/ic_launcher" />
 
-    <Button
-        android:id="@+id/btnPrice"
-        android:layout_width="208dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/descCountryTv"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="-79dp"
-        android:text="@string/btnPrice" />
+        <TextView
+            android:id="@+id/nameCountryTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/countryName"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnComment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/btnPrice"
-        android:layout_alignBottom="@id/btnPrice"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginEnd="-171dp"
-        android:layout_marginBottom="-1dp"
-        android:text="@string/btnComment" />
+        <Button
+            android:id="@+id/btnPrice"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/descCountryTv"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="-79dp"
+            android:text="@string/btnPrice" />
 
-    <TextView
-        android:id="@+id/descCountryTv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/textCountryImage"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:layout_below="@+id/imageCountryIv"/>
+        <Button
+            android:id="@+id/btnComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btnPrice"
+            android:layout_alignBottom="@id/btnPrice"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="-146dp"
+            android:layout_marginBottom="-1dp"
+            android:text="@string/btnComment" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerviewComment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btnPrice"
-        android:layout_marginBottom="-215dp" />
+        <TextView
+            android:id="@+id/descCountryTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageCountryIv"
+            android:gravity="center"
+            android:text="@string/textCountryImage"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerComment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/btnPrice"
+            android:layout_marginBottom="-294dp" />
+
+    </RelativeLayout>
 
 
-</RelativeLayout>
+</ScrollView>

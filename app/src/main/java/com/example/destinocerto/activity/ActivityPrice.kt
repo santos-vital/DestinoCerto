@@ -1,5 +1,6 @@
 package com.example.destinocerto.activity
 
+import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -131,6 +132,11 @@ class ActivityPrice : AppCompatActivity() {
                     Response.ErrorListener { tvBid.text = "Error" })
 
             queue.add(stringRequest)
+        }
+
+        trivago.setOnClickListener{
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.trivago.com.br/"))
+            startActivity(intent)
         }
     }
 }

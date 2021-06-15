@@ -25,29 +25,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_alignTop="@+id/imageCountryIv"
             android:gravity="center"
             android:text="@string/countryName"
             android:textSize="22sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/btnPrice"
-            android:layout_width="208dp"
+            android:id="@+id/btnMore"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/descCountryTv"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="-79dp"
-            android:text="@string/btnPrice" />
+            android:layout_marginBottom="-59dp"
+            android:text="@string/btnMore" />
 
         <Button
             android:id="@+id/btnComment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/btnPrice"
-            android:layout_alignBottom="@id/btnPrice"
+            android:layout_alignEnd="@+id/btnMore"
+            android:layout_alignBottom="@id/btnMore"
             android:layout_gravity="center_horizontal"
-            android:layout_marginEnd="-146dp"
-            android:layout_marginBottom="-1dp"
+            android:layout_marginEnd="-291dp"
+            android:layout_marginBottom="1dp"
             android:text="@string/btnComment" />
 
         <TextView
@@ -55,16 +56,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageCountryIv"
+            android:layout_marginTop="15dp"
             android:gravity="center"
             android:text="@string/textCountryImage"
             android:textSize="18sp" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerComment"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignBottom="@+id/btnPrice"
-            android:layout_marginBottom="-294dp" />
+            android:layout_height="300dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_alignBottom="@+id/btnMore"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerComment"
+                android:layout_width="match_parent"
+                android:layout_height="244dp"
+                android:layout_marginBottom="-308dp" />
+
+        </LinearLayout>
 
     </RelativeLayout>
 

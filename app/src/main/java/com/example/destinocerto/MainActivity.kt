@@ -7,7 +7,7 @@ import android.view.MenuItem
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.destinocerto.model.Country
-import com.example.destinocerto.activity.MyCustomAdapter
+import com.example.destinocerto.activity.CountryAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import kotlin.collections.ArrayList
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         countries.add(Country("Inglaterra", "Inglaterra (em inglês: England) é uma das nações constituintes do Reino Unido.", R.drawable.flag_england))
         displayList.addAll(countries)
 
-        val adapter = MyCustomAdapter(displayList, this);
+        val adapter = CountryAdapter(displayList, this);
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
     }

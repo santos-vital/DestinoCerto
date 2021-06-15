@@ -36,8 +36,9 @@ class CountryImages : AppCompatActivity() {
         descCountryTv.text = aDescription
         imageCountryIv.setImageResource(aImageView)
 
+        //Verificação para mostrar a cotação da moeda de cada país específico ao clicar no botão da cotação
         if (aTitle.equals("Alemanha")) {
-            val button: Button = findViewById(R.id.btnPrice)
+            val button: Button = findViewById(R.id.btnMore)
             button.setOnClickListener {
                 val intentCoin = Intent(this, ActivityPrice::class.java)
                 intentCoin.putExtra("type", "0")
@@ -45,7 +46,7 @@ class CountryImages : AppCompatActivity() {
             }
         }
         if (aTitle.equals("Estados Unidos")) {
-            val button: Button = findViewById(R.id.btnPrice)
+            val button: Button = findViewById(R.id.btnMore)
             button.setOnClickListener {
                 val intentCoin = Intent(this, ActivityPrice::class.java)
                 intentCoin.putExtra("type", "1")
@@ -53,7 +54,7 @@ class CountryImages : AppCompatActivity() {
             }
         }
         if (aTitle.equals("China")) {
-            val button: Button = findViewById(R.id.btnPrice)
+            val button: Button = findViewById(R.id.btnMore)
             button.setOnClickListener {
                 val intentCoin = Intent(this, ActivityPrice::class.java)
                 intentCoin.putExtra("type", "2")
@@ -61,7 +62,7 @@ class CountryImages : AppCompatActivity() {
             }
         }
         if (aTitle.equals("França")) {
-            val button: Button = findViewById(R.id.btnPrice)
+            val button: Button = findViewById(R.id.btnMore)
             button.setOnClickListener {
                 val intentCoin = Intent(this, ActivityPrice::class.java)
                 intentCoin.putExtra("type", "3")
@@ -69,7 +70,7 @@ class CountryImages : AppCompatActivity() {
             }
         }
         if (aTitle.equals("Inglaterra")) {
-            val button: Button = findViewById(R.id.btnPrice)
+            val button: Button = findViewById(R.id.btnMore)
             button.setOnClickListener {
                 val intentCoin = Intent(this, ActivityPrice::class.java)
                 intentCoin.putExtra("type", "4")
@@ -77,12 +78,14 @@ class CountryImages : AppCompatActivity() {
             }
         }
 
+        //Evento de click que chama a activity para adicionar um comentário
         val buttonComment: Button = findViewById(R.id.btnComment)
         buttonComment.setOnClickListener {
             val intentComment = Intent(this, Comment::class.java)
             startActivity(intentComment)
         }
 
+        // Aqui estamos inflando o recycler view com os dados do banco
         val adapter = ListAdapter()
         val recyclerView = recyclerComment
         recyclerView.adapter = adapter

@@ -16,4 +16,5 @@
     <string name="descriptionPrice">Value of BRL 1.00:</string>
     <string name="btnComment">Comment</string>
     <string name="btnSave_comment">Save comment</string>
+    <string name="btnMore">More</string>
 </resources>

@@ -17,25 +17,26 @@ class Comment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_comment)
-            val comment = intent.getStringExtra("cmt")
 
             mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
-
+        // Evento de click para salvar o comentário
         save_comment.setOnClickListener {
 
             insertDataToDatabase()
         }
     }
 
+    // essa função é para inserir dados ao banco
     private fun insertDataToDatabase() {
         val nickName = et_nickName.text.toString()
         val comment = et_addComment.text.toString()
 
+        // Aqui fazemos a verificação se todos os campos estão preenchidos
         if(inputCheck(nickName, comment)) {
-            // Create User Object
+            // Criamos o usuário
             val user = User( 0, nickName, comment)
-            // Add Data to Database
+            // Adicionamos dados ao banco
             mUserViewModel.addUser(user)
             Toast.makeText(this, "Comentário adicionado!", Toast.LENGTH_LONG).show()
         }else {
@@ -43,7 +44,8 @@ class Comment : AppCompatActivity() {
         }
     }
 
+        // Método para verificar se os campos que recebem os dados estão preenchidos ou não
         private fun inputCheck(nickName: String, comment: String): Boolean {
-            return !(TextUtils.isEmpty(nickName) && TextUtils.isEmpty(comment))
+            return !(TextUtils.isEmpty(nickName) || TextUtils.isEmpty(comment))
         }
     }

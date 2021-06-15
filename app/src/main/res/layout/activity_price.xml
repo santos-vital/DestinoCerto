@@ -58,4 +58,11 @@
         android:paddingStart="10dp"
         android:text="@string/descriptionPrice" />
 
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="212dp"
+        android:layout_alignBottom="@+id/tvBid"
+        android:layout_marginBottom="-267dp" />
+
 </RelativeLayout>

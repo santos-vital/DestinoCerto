@@ -10,8 +10,8 @@ import com.example.destinocerto.R
 import com.example.destinocerto.model.Country
 import kotlinx.android.synthetic.main.row.view.*
 
-class MyCustomAdapter(val arrayList: ArrayList<Country>, val ctx: Context) :
-RecyclerView.Adapter<MyCustomAdapter.ViewHolder>() {
+class CountryAdapter(val arrayList: ArrayList<Country>, val ctx: Context) :
+RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
 
 class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

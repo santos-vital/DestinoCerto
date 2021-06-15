@@ -17,4 +17,5 @@
     <string name="btnComment">Comment</string>
     <string name="btnSave_comment">Save comment</string>
     <string name="btnMore">More</string>
+    <string name="btnBooking">To plan</string>
 </resources>

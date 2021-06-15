@@ -7,6 +7,7 @@
     <string name="hint_nickName">Apelido</string>
     <string name="hint_comment">Comentário</string>
     <string name="btnMore">Mais</string>
+    <string name="btnBooking">Planejar</string>
     <string name="btnComment">Comentário</string>
     <string name="btnSave_comment">Salvar Comentário</string>
     <string name="priceTitle">Cotação da moeda</string>

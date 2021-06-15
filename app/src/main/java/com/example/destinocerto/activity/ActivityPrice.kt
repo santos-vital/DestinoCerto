@@ -134,8 +134,8 @@ class ActivityPrice : AppCompatActivity() {
             queue.add(stringRequest)
         }
 
-        trivago.setOnClickListener{
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.trivago.com.br/"))
+        btnBooking.setOnClickListener{
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.booking.com/"))
             startActivity(intent)
         }
     }
